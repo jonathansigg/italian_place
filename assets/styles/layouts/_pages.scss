@@ -1,0 +1,16 @@
+// cover images
+.home-image { 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: $home-image-height;
+  width: 100%;
+  position: relative;
+  width: calc(100vw - 9px);
+  left: 50%;
+  margin-left: -50vw;
+}
+
+// blocks
+.block-content { min-height: calc(#{$block-height} - #{$banner-height}); }

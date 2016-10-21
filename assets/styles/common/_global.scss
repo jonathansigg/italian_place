@@ -1,0 +1,10 @@
+// Bodypadding because of fixed nav
+body { padding-top: $banner-height; }
+
+// Container
+.container-fluid { max-width: $container-max-width; }
+
+// Links
+a {
+  &:hover { text-decoration: none; }
+}

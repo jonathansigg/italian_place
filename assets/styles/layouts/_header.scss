@@ -1,0 +1,10 @@
+header.banner {
+  padding: $nav-padding 0; height: $banner-height; position: fixed; top: 0; left: 0; width: 100%; z-index: 10; background: white;
+  .brand > img { width: $logo-width; height: auto; }
+  .nav-primary { display: inline-block; width: calc(100% - #{($logo-width + 5px)});
+    li { display: inline-block;
+      & > a { padding: #{($nav-padding / 2)} $nav-padding; }
+      &:last-child > a { padding-right: 0; }
+    }
+  }
+}
