@@ -1,5 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Old+Standard+TT);
+
+
 // Bodypadding because of fixed nav
-body { padding-top: $banner-height; }
+body {
+  padding-top: $banner-height;
+  font-family: 'Old Standard TT', serif;
+  color: #FFF;
+  background: $brand-background;
+}
+
+@for $i from 1 through 6 {
+  h#{$i}, .h#{$i} {
+    font-family: 'Amatic SC', cursive;
+  }
+}
 
 // Container
 .container-fluid { max-width: $container-max-width; }
