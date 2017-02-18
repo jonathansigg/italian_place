@@ -4,14 +4,13 @@
 // Bodypadding because of fixed nav
 body {
   padding-top: $banner-height;
-  font-family: 'Old Standard TT', serif;
   color: #FFF;
   background: $brand-background;
 }
 
 @for $i from 1 through 6 {
   h#{$i}, .h#{$i} {
-    font-family: 'Amatic SC', cursive;
+    font-family: $font-family-headings;
   }
 }
 

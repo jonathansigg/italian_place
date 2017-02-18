@@ -7,6 +7,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4"
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4",
+    "swiper": "^3.4.1",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }
