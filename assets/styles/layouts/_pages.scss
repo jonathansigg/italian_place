@@ -42,32 +42,40 @@
 }
 
 //users
-.user-wrapper {
+.box-wrapper {
   margin: 1rem 0;
-  .user {
+  .box {
+    box-shadow: 0px 7px 16px -5px rgba(0,0,0,0.35);
     padding: 0;
-    background: $brand-users;
+    background: $brand-box;
     display: flex;
     flex-wrap: wrap;
     padding-left: .5rem;
     margin: 1rem 0;
-    .user-caption {
+    display: table;
+    .box-caption {
+      display: table-cell;
       padding: 1rem 1rem 1rem .5rem;
+      vertical-align: top;
     }
-    .user-image {
-      margin: 1rem 1rem 1rem .5rem;
-      position: relative;
-      width: 150px;
-      height: 150px;
-      overflow: hidden;
-      border-radius: 150px;
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 100%;
-        height: auto;
+    .box-image {
+      display: table-cell;
+      vertical-align: top;
+      .image {
+        margin: 1rem 1rem 1rem .5rem;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 150px;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
@@ -93,4 +101,14 @@
   }
 }
 
-.page-header { padding-top: 1rem; }
+.page-header { padding-top: 1rem; margin-bottom: 2rem; }
+
+@media (max-width: breakpoint-max('md',$grid-breakpoints)) {
+  .box {
+    display: block;
+    .box-image, .box-caption {
+      display: block;
+      width: 100%;
+    }
+  }
+}

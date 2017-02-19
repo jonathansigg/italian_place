@@ -11,4 +11,50 @@ header.banner {
       &:last-child > a { padding-right: 0; }
     }
   }
+  .hamburger-wrapper {
+    .hamburger {
+      padding: 0;
+      top: 15px;
+      position: relative;
+      .hamburger-inner {
+        background-color: #FFF;
+        &:before, &:after {
+          background-color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: breakpoint-max('md',$grid-breakpoints)) {
+  header.banner {
+    nav.nav-primary {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: $brand-banner;
+      height: auto;
+      top: 85px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .menu-item {
+        display: block;
+        width: 100%;
+      }
+      li > a {
+        padding: 1rem;
+        width: 100%;
+        font-size: $font-size-h4;
+        text-align: center;
+        &:hover {
+          background: $brand-primary;
+        }
+      }
+    }
+  }
 }

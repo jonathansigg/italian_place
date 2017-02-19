@@ -12,3 +12,17 @@ function user_function() {
 		)
 	);
 }
+
+add_action( 'init', 'product_cat' );
+
+function product_cat() {
+	register_taxonomy(
+		'product_cat',
+		'products',
+		array(
+			'label' => __( 'Produktkategorie' ),
+			'rewrite' => array( 'slug' => 'product_cat' ),
+			'hierarchical' => true,
+		)
+	);
+}

@@ -74,4 +74,11 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  $(document).ready(function(){
+    $('.hamburger-wrapper .hamburger').click(function(){
+      $(this).toggleClass('hamburger--active');
+      $('header.banner .nav.nav-primary').toggleClass('show');
+    });
+  });
+
 })(jQuery); // Fully reference jQuery after this point.

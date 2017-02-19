@@ -13,4 +13,12 @@ function sc_map( $atts ){
 }
 add_shortcode( 'map', 'sc_map' );
 
+function sc_products( $atts ){
+  $dir = get_template_directory();
+  ob_start();
+  get_template_part('shortcodes/products');
+  return ob_get_clean();
+}
+add_shortcode( 'produkte', 'sc_products' );
+
 ?>

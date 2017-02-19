@@ -3,7 +3,7 @@
     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
       <img src="<?= get_template_directory_uri() ?>/dist/images/logo.svg" alte="Italian Place">
     </a>
-    <div class="hamburger-wrapper text-xs-right hidden-md-up">
+    <div class="hamburger-wrapper pull-xs-right hidden-md-up">
       <button class="hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
