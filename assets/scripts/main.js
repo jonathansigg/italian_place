@@ -76,8 +76,8 @@
 
   $(document).ready(function(){
     $('.hamburger-wrapper .hamburger').click(function(){
-      $(this).toggleClass('hamburger--active');
-      $('header.banner .nav.nav-primary').toggleClass('show');
+      $(this).toggleClass('is-active');
+      $('header.banner nav.nav-primary').toggleClass('show');
     });
   });
 

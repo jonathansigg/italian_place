@@ -5,8 +5,8 @@
         <h4>Soziale Medien</h4>
         <p>
           <nav class="nav nav-inline">
-            <a class="nav-link" href="/"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="nav-link" href="/"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="nav-link" target="_blank" title="Facebook" href="https://www.facebook.com/italianplace.ch/"><i class="fa fa-facebook fa-2x"></i></a>
+            <a class="nav-link" target="_blank" title="Instagram" href="https://www.instagram.com/italian.place/"><i class="fa fa-instagram fa-2x"></i></a>
           </nav>
         </p>
       </div>

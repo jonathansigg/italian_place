@@ -47,13 +47,15 @@ header.banner {
         width: 100%;
       }
       li > a {
-        padding: 1rem;
+        padding: .5rem 1rem;
         width: 100%;
         font-size: $font-size-h4;
         text-align: center;
+        display: block;
         &:hover {
           background: $brand-primary;
         }
+        &:last-child > a { padding-right: .5rem; }
       }
     }
   }

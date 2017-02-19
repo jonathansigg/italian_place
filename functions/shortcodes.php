@@ -21,4 +21,12 @@ function sc_products( $atts ){
 }
 add_shortcode( 'produkte', 'sc_products' );
 
+function sc_tagesmenu( $atts ){
+  $dir = get_template_directory();
+  ob_start();
+  get_template_part('shortcodes/tagesmenu');
+  return ob_get_clean();
+}
+add_shortcode( 'tagesmenu', 'sc_tagesmenu' );
+
 ?>

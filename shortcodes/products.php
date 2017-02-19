@@ -39,7 +39,7 @@ foreach($user_functions as $uf):
     $image = get_field('produktbild',$post->ID);
     $title = $post->post_title;
     ?>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="box">
         <?php if(!empty($image)): ?>
         <div class="box-image">

@@ -23,14 +23,9 @@ function users() {
 		'label'               => __( 'users', 'italianplace' ),
 		'description'         => __( 'Mitarbeiter', 'italianplace' ),
 		'labels'              => $labels,
-		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title','revisions' ),
-		/* A hierarchical CPT is like Pages and can have
-		* Parent and child items. A non-hierarchical CPT
-		* is like Posts.
-		*/
 		'hierarchical'        => false,
-		'public'              => true,
+		'public'              => false,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'show_in_nav_menus'   => true,
@@ -84,7 +79,7 @@ function products() {
 		* is like Posts.
 		*/
 		'hierarchical'        => false,
-		'public'              => true,
+		'public'              => false,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'show_in_nav_menus'   => true,
@@ -105,3 +100,56 @@ function products() {
 * unnecessarily executed.
 */
 add_action( 'init', 'products', 0 );
+
+function tagesmenu() {
+// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'Tagesmenü', 'Post Type General Name', 'italianplace' ),
+		'singular_name'       => _x( 'Tagesmenüs', 'Post Type Singular Name', 'italianplace' ),
+		'menu_name'           => __( 'Tagesmenü', 'italianplace' ),
+		'parent_item_colon'   => __( 'Tagesmenü Eltern', 'italianplace' ),
+		'all_items'           => __( 'Alle Tagesmenü', 'italianplace' ),
+		'view_item'           => __( 'Tagesmenü anzeigen', 'italianplace' ),
+		'add_new_item'        => __( 'Neues Tagesmenü', 'italianplace' ),
+		'add_new'             => __( 'Hinzufügen', 'italianplace' ),
+		'edit_item'           => __( 'Tagesmenü bearbeiten', 'italianplace' ),
+		'update_item'         => __( 'Tagesmenüs aktualisieren', 'italianplace' ),
+		'search_items'        => __( 'Tagesmenü suchen', 'italianplace' ),
+		'not_found'           => __( 'Nicht gefunden', 'italianplace' ),
+		'not_found_in_trash'  => __( 'Nicht in gelöscht gefunden', 'italianplace' ),
+	);
+
+// Set other options for Custom Post Type
+
+	$args = array(
+		'label'               => __( 'tagesmenu', 'italianplace' ),
+		'description'         => __( 'Tagesmenü', 'italianplace' ),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array( 'title','revisions' ),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	// Registering your Custom Post Type
+	register_post_type( 'tagesmenu', $args );
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+add_action( 'init', 'tagesmenu', 0 );

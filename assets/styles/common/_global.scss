@@ -21,6 +21,10 @@ a {
   &:hover { text-decoration: none; }
 }
 
+.btn {
+  transition: color 200ms ease-in-out, background 200ms ease-in-out;
+}
+
 //template
 .page-template {
   &-template-home,
