@@ -3,7 +3,11 @@ header.banner {
   .brand > img { width: $logo-width; height: auto; }
   .nav-primary { display: inline-block; width: calc(100% - #{($logo-width + 5px)});
     li { display: inline-block;
-      & > a { padding: #{($nav-padding / 2)} $nav-padding; }
+      & > a {
+        padding: #{($nav-padding / 2)} $nav-padding;
+        color: #FFF;
+        &:hover { color: darken(#FFF,10%); }
+      }
       &:last-child > a { padding-right: 0; }
     }
   }

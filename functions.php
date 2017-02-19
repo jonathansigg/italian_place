@@ -37,4 +37,5 @@ unset($file, $filepath);
 require_once("functions/config.php");
 require_once("functions/taxonomies.php");
 require_once("functions/custom_posttypes.php");
+require_once("functions/shortcodes.php");
 require_once("functions/acf.php");

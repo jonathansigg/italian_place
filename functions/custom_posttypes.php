@@ -24,7 +24,7 @@ function users() {
 		'description'         => __( 'Mitarbeiter', 'italianplace' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
-		'supports'            => array( 'revisions' ),
+		'supports'            => array( 'title','revisions' ),
 		/* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
