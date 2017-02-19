@@ -1,7 +1,7 @@
 <footer class="content-info">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6">
         <h4>Soziale Medien</h4>
         <p>
           <nav class="nav nav-inline">
@@ -10,10 +10,10 @@
           </nav>
         </p>
       </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="form-grpup">
+      <div class="col-xs-12 col-md-6">
+        <div class="form-grpup text-md-right">
           <h4>Empfehlen sie uns weiter</h4>
-          <div id="TA_restaurantWidgetGreen377" class="TA_restaurantWidgetGreen"><ul id="Dl1CitU" class="TA_links rIWtzyOR0"><li id="SZcluTWbB" class="HWBknF"><a target="_blank" href="https://www.tripadvisor.ch/"><img src="https://www.tripadvisor.ch/img/cdsi/partner/tripadvisor_logo_117x18-24177-2.png" alt="TripAdvisor"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=restaurantWidgetGreen&amp;uniq=377&amp;locationId=11916211&amp;icon=knifeAndFork&amp;lang=de_CH&amp;display_version=2"></script>
+          <div id="TA_restaurantWidgetGreen377" class="TA_restaurantWidgetGreen pull-md-right"><ul id="Dl1CitU" class="TA_links rIWtzyOR0"><li id="SZcluTWbB" class="HWBknF"><a target="_blank" href="https://www.tripadvisor.ch/"><img src="https://www.tripadvisor.ch/img/cdsi/partner/tripadvisor_logo_117x18-24177-2.png" alt="TripAdvisor"/></a></li></ul></div><script src="https://www.jscache.com/wejs?wtype=restaurantWidgetGreen&amp;uniq=377&amp;locationId=11916211&amp;icon=knifeAndFork&amp;lang=de_CH&amp;display_version=2"></script>
         </div>
       </div>
     </div>

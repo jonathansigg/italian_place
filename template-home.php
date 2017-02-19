@@ -8,7 +8,7 @@ if($homeaddition == 'video'):
 $video = get_field('homevideo','option');
 ?>
 <div class="home-video">
-  <video controls class="video">
+  <video autoplay class="video">
     <source src="<?= $video['url'] ?>" type="<?= $video['mime_type'] ?>">
     I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
     <!-- You can embed a Flash player here, to play your mp4 video in older browsers -->

@@ -1,3 +1,20 @@
+.home-slider {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      opacity: 0.5;
+      &-active {
+        background-color: $brand-primary;
+      }
+    }
+  }
+  .caption {
+    font-size: $font-size-h1;
+    padding: .5rem 0;
+    font-family: $font-family-headings;
+    text-shadow: 0px 0px 0px rgba(50, 50, 50, 1);
+  }
+}
+
 // cover images
 .home-image {
   background-repeat: no-repeat;
