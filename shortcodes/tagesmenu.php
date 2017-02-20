@@ -22,7 +22,7 @@ $posts = get_posts($post_args);
         <div class="date">
           <div class="day"><?= $tag ?></div>
           <div class="month-year">
-            <span class="month"><?= $monat ?></span>
+            <span class="month"><?= $monat ?></span>l
             <span class="year"><?= $jahr ?></span>
           </div>
         </div>
