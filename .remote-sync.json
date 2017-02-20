@@ -1,0 +1,16 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "sl61.web.hostpoint.ch",
+  "port": "22",
+  "target": "/home/siggmart/www/italianplace.ch/wp-content/themes/italianplace-theme",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "italianplace@italianplace.ch",
+  "password": "Producing@Studio15",
+  "watch": []
+}

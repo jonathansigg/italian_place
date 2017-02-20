@@ -29,4 +29,11 @@ function sc_tagesmenu( $atts ){
 }
 add_shortcode( 'tagesmenu', 'sc_tagesmenu' );
 
+function sc_tagesmenu_heute( $atts ){
+  $dir = get_template_directory();
+  ob_start();
+  get_template_part('shortcodes/tagesmenu_heute');
+  return ob_get_clean();
+}
+add_shortcode( 'tagesmenu_heute', 'sc_tagesmenu_heute' );
 ?>

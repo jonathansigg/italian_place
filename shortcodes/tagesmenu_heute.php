@@ -1,11 +1,11 @@
 <?php
 $post_args = array(
-  'showposts' => -1,
+  'showposts' => 1,
   'post_type' => 'tagesmenu',
 );
 $posts = get_posts($post_args);
 ?>
-<div class="box-wrapper">
+<div class="box-wrapper" style="max-width: 600px; margin: 4rem auto;">
   <h2><?= $uf->name; ?></h2>
   <div class="row">
   <?php foreach($posts as $post): ?>
@@ -17,7 +17,7 @@ $posts = get_posts($post_args);
     $jahr = date('y',strtotime($post->post_date));
     $url = get_permalink($post->ID);
     ?>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12">
       <div class="box box-fullwidth">
         <div class="date">
           <div class="day"><?= $tag ?></div>
