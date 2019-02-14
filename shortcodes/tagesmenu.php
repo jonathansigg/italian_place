@@ -13,8 +13,6 @@ $tag = date('j',strtotime($post->post_date));
 $monat = date('F',strtotime($post->post_date));
 $jahr = date('y',strtotime($post->post_date));
 
-var_dump($image);
-
 ?>
 <?php
 $post_args = array(
