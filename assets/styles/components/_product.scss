@@ -1,0 +1,33 @@
+.product {
+  &-title {
+    margin-bottom: 3rem;
+    position: relative;
+
+    > h2 {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      background: darken($brand-background,10%);
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      width: 80%;
+      max-width: 800px;
+    }
+  }
+
+  &-item {
+    margin-bottom: 3rem;
+  }
+
+  &-image {
+    > img {
+      border-radius: 100%;
+      max-width: 100%;
+    }
+  }
+}

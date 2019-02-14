@@ -29,8 +29,11 @@ foreach($user_functions as $uf):
   );
   $posts = get_posts($post_args);
 ?>
-<div class="box-wrapper">
-  <h2><?= $uf->name; ?></h2>
+
+<div class="product">
+  <div class="product-title">
+    <h2><?= $uf->name; ?></h2>
+  </div>
   <div class="row">
   <?php foreach($posts as $post): ?>
     <?php
@@ -39,15 +42,15 @@ foreach($user_functions as $uf):
     $image = get_field('produktbild',$post->ID);
     $title = $post->post_title;
     ?>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="box">
+    <div class="product-item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="product-subtitle"><h3><?= $title; ?></h3></div>
+      <div class="row">
         <?php if(!empty($image)): ?>
-        <div class="box-image">
-          <div class="image"><img src="<?= $image['url'] ?>" alt="<?= $title ?>"></div>
+        <div class="col-xs-12">
+          <div class="product-image"><img src="<?= $image['sizes']['thumbnail'] ?>" alt="<?= $title ?>"></div>
         </div>
         <?php endif; ?>
-        <div class="box-caption">
-          <h4><?= $title ?></h4>
+        <div class="col-xs-12">
           <p><?= $description ?></p>
           <div class="price lead">CHF <?= $preis ?></div>
         </div>
@@ -56,6 +59,4 @@ foreach($user_functions as $uf):
   <?php endforeach; ?>
   </div>
 </div>
-<?php
-endforeach;
-?>
+<?php endforeach; ?>

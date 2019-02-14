@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-    <div class="small">
-      Italian Place &copy; - 2017
+    <div class="small pt-1">
+      Italian Place &copy; - <?= date('Y'); ?>
     </div>
   </div>
 </footer>

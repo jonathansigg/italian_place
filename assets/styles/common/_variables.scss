@@ -3,14 +3,14 @@ $enable-flex:           true;
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
-$enable-flex:           true;
-
 // Colors
-$brand-primary:         #9CCC65;
-$brand-background:      #37474F;
-$brand-banner:          #546E7A;
+$brand-primary:         #333333;//#9CCC65;
+$brand-background:      #d1d8e0;//#37474F;
+$brand-banner:          darken($brand-primary,5%);//#546E7A;
 $brand-box:             lighten($brand-background,10%);
-$brand-footer:          #263238;
+$brand-footer:          $brand-banner;//#263238;
+$brand-footer-text:     #FFF;
+$link-color:            #3498db;
 
 // Header
 $logo-width:            270px;
@@ -27,5 +27,5 @@ $home-image-height:     50vh;
 $block-height:          100vh;
 
 // Fonts and more
-$font-family-sans-serif: 'Open Sans Condensed', sans-serif;
-$font-family-headings:   'Amatic SC', cursive;
+$font-family-sans-serif: 'Dosis', sans-serif;
+$font-family-headings:   'Sacramento', cursive;

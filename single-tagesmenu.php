@@ -2,7 +2,8 @@
   <?php get_template_part('templates/page', 'header'); ?>
   <?php
     $image = get_field('bild');
-    $content = get_field('beschreibung');
+    $content_one = get_field('kurzbeschreibung');
+    $content_two = get_field('beschreibung');
     $tag = date('j',strtotime($post->post_date));
     $monat = date('F',strtotime($post->post_date));
     $jahr = date('y',strtotime($post->post_date));
@@ -18,13 +19,16 @@
         <span class="year"><?= $jahr ?></span>
       </div>
     </div>
+    <?php if(!empty($image)): ?>
     <div class="box-image">
       <div class="image">
-        <img src="<?= $image['url']; ?>" alt="<?= $post->post_title ?>">
+        <img src="<?= $image['sizes']['thumbnail']; ?>" alt="<?= $post->post_title ?>">
       </div>
     </div>
+    <?php endif; ?>
     <div class="box-caption">
-      <?= $content ?>
+      <p><?= $content_one ?></p>
+      <?= $content_two; ?>
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
  * Template Name: Normale Seite
  */
  $topslider = get_field('slider_anzeigen');
- if(isset($topslider)) :
+ if(!empty($topslider)) :
    $sliderimages = get_field('sliderbilder','option');
    $slidereffect = get_field('slidereffect','slidereffekt');
  ?>

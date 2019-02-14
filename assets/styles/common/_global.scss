@@ -1,7 +1,7 @@
 // Bodypadding because of fixed nav
 body {
   padding-top: $banner-height;
-  color: #FFF;
+  color: $brand-primary;
   background: $brand-background;
 }
 
@@ -29,11 +29,16 @@ a {
 .page-template {
   &-template-home,
   &-template-custom {
-    main.main { padding: 0; }
+    main.main { padding: 1rem 0 0; }
     .main-page { padding: 0 15px; }
     .wrap.container-fluid {
       max-width: none;
       width: 100%;
     }
   }
+}
+
+// paddings
+.pt-1 {
+  paddin-top: 1rem;
 }
