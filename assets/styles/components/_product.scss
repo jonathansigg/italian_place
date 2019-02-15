@@ -10,7 +10,7 @@
 
     &:after {
       content: "";
-      background: darken($brand-background,10%);
+      background: darken($brand-primary,10%);
       height: 1px;
       position: absolute;
       left: 0;

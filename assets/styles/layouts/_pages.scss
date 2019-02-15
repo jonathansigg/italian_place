@@ -12,7 +12,7 @@
     font-size: $font-size-h1;
     padding: .5rem 0;
     font-family: $font-family-headings;
-    text-shadow: 0px 0px 0px rgba(50, 50, 50, 1);
+    text-shadow: 2px 2px 10px black;
   }
 }
 
@@ -98,8 +98,20 @@
         }
       }
     }
-    &.box-today { max-width: 800px; width: 100%; margin: 3rem auto;
+    &.box-today {
+      width: 100%;
+      margin: 3rem auto;
+      font-size: 1.3rem;
+      @include media-breakpoint-up(xl) {
+        font-size: 1.8rem;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 1rem;
+      }
       .box-image {
+        @include media-breakpoint-up(xl) {
+          width: 50%;
+        }
         .image {
           width: auto;
           height: auto;
@@ -111,6 +123,7 @@
             left: 0;
             transform: none;
             width: auto; height: auto;
+            max-width: 100%;
           }
         }
       }

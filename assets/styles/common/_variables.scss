@@ -4,9 +4,9 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #333333;//#9CCC65;
-$brand-background:      #d1d8e0;//#37474F;
-$brand-banner:          darken($brand-primary,5%);//#546E7A;
+$brand-primary:         #d1d8e0;//#333333;//#9CCC65;
+$brand-background:      #333333;//#d1d8e0;//#37474F;
+$brand-banner:          darken($brand-background,5%);//#546E7A;
 $brand-box:             lighten($brand-background,10%);
 $brand-footer:          $brand-banner;//#263238;
 $brand-footer-text:     #FFF;

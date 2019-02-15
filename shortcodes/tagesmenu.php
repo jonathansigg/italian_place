@@ -35,7 +35,7 @@ $posts = get_posts($post_args);
     </div>
     <?php if(!empty($image)): ?>
     <div class="box-image">
-      <div class="image"><img src="<?= $image['sizes']['medium']; ?>" alt="<?= $title ?>"></div>
+      <div class="image"><img src="<?= $image['sizes']['medium_large']; ?>" alt="<?= $title ?>"></div>
     </div>
     <?php endif; ?>
     <div class="box-caption">
