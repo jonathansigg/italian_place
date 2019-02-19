@@ -36,4 +36,12 @@ function sc_tagesmenu_heute( $atts ){
   return ob_get_clean();
 }
 add_shortcode( 'tagesmenu_heute', 'sc_tagesmenu_heute' );
+
+function sc_tagesmenu_animiert( $atts ){
+  $dir = get_template_directory();
+  ob_start();
+  get_template_part('shortcodes/tagesmenu_animiert');
+  return ob_get_clean();
+}
+add_shortcode( 'tagesmenu_animiert', 'sc_tagesmenu_animiert' );
 ?>

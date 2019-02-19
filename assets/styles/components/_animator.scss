@@ -1,0 +1,104 @@
+$animator-background: black;
+$animator-color: white;
+$animator-text-1: 3rem;
+$animator-text-2: 2rem;
+$animator-padding: 3rem;
+$animator-animation-dur: 20s;
+$animator-text-offset: -50px;
+$animator-text-position: top;
+$animator-text-width: 30%;
+$animator-image-width: (100% - $animator-text-width);
+
+@keyframes ImageAnimation {
+  5% { transform: scale(1.2); opacity: 0; }
+  25% { opacity: 1; }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes TextOne {
+  0% { opacity: 0; bottom: $animator-text-offset; }
+  20% { opacity: 1; bottom: 0px; }
+  80% { opacity: 1; }
+  100% { opacity: 0; bottom: 0px; }
+}
+
+@keyframes TextTwo {
+  2% { opacity: 0; bottom: $animator-text-offset; }
+  22% { opacity: 1; bottom: 0px; }
+  80% { opacity: 1; }
+  100% { opacity: 0; bottom: 0px; }
+}
+
+@keyframes ImageView {
+  0% { opacity: 0; bottom: $animator-text-offset; }
+  10% { opacity: 0; bottom: $animator-text-offset; }
+  30% { opacity: 1; bottom: 0px; }
+  80% { opacity: 1; }
+  100% { opacity: 0; bottom: 0px; }
+}
+
+.animator {
+  background: $animator-background;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: $animator-color;
+  padding: $animator-padding;
+  text-shadow: 1px 1px 10px black;
+  z-index: 999999999999;
+
+  &-text {
+    width: $animator-text-width;
+    &-one {
+      position: relative;
+      font-size: $animator-text-1;
+      opacity: 0;
+      bottom: $animator-text-offset;
+      animation: TextOne $animator-animation-dur infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    &-two {
+      position: relative;
+      font-size: $animator-text-2;
+      opacity: 0;
+      bottom: $animator-text-offset;
+      animation: TextTwo $animator-animation-dur infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  &-background {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(60px);
+    transform: scale(1.2);
+    opacity: 0;
+    animation: ImageAnimation $animator-animation-dur infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  &-image {
+    position: relative;
+    width: $animator-image-width;
+
+    img {
+      position: relative;
+      width: 100%;
+      opcity: 0;
+      animation: ImageView $animator-animation-dur infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
