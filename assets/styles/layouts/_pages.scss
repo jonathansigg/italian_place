@@ -102,11 +102,14 @@
       width: 100%;
       margin: 3rem auto;
       font-size: 1.3rem;
+      h1 { font-size: 1.5rem; }
       @include media-breakpoint-up(xl) {
-        font-size: 1.8rem;
+        font-size: 3rem;
+        h1 { font-size: 3.2rem; }
       }
       @include media-breakpoint-down(xs) {
         font-size: 1rem;
+        h1 { font-size: 1.2rem; }
       }
       .box-image {
         @include media-breakpoint-up(xl) {

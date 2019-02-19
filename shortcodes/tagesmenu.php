@@ -6,8 +6,7 @@ $post_args = array(
 );
 $posts = get_posts($post_args);
 $post = $posts[0];
-$content_one = get_field('kurzbeschreibung');
-$content_two = get_field('beschreibung');
+$content = get_field('kurzbeschreibung');
 $image = get_field('bild');
 $tag = date('j',strtotime($post->post_date));
 $monat = date('F',strtotime($post->post_date));
@@ -24,7 +23,6 @@ $posts = get_posts($post_args);
 ?>
 <div class="box-wrapper">
   <h2><?= $uf->name; ?></h2>
-  <h3>Heute gibt es</h3>
   <div class="box box-today">
     <div class="date">
       <div class="day"><?= $tag ?></div>
@@ -39,9 +37,10 @@ $posts = get_posts($post_args);
     </div>
     <?php endif; ?>
     <div class="box-caption">
+      <h1>Heute gibt es</h1>
       <h2><?= $post->post_title ?></h2>
-      <p><?= $content_one ?></p>
-      <?= $content_two; ?>
+      <p><?= $content ?></p>
+      <a href="<?= $url ?>" class="btn btn-outline-primary">Weiter lesen</a>
     </div>
   </div>
 
