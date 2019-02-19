@@ -13,7 +13,7 @@ $posts = get_posts($post_args);
 <?php endforeach; ?>
 
 <div class="animator">
-  <div class="animator-background" style="background-image: url(<?= $image['sizes']['large'] ?>);"></div>
+  <div class="animator-background" style="background-image: url(<?= get_template_directory_uri() ?>/dist/images/animator-background.jpg);"></div>
   <div class="animator-wrapper">
     <div class="animator-text">
       <div class="animator-text-one">
