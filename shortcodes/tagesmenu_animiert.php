@@ -12,6 +12,10 @@ $posts = get_posts($post_args);
   ?>
 <?php endforeach; ?>
 
+<?php
+  $orientation = $image['sizes']['large-width'] >= $image['sizes']['large-height'] ? 'landscape' : 'portrait';
+?>
+
 <div class="animator">
   <div class="animator-background" style="background-image: url(<?= get_template_directory_uri() ?>/dist/images/animator-background.jpg);"></div>
   <div class="animator-wrapper">
@@ -26,7 +30,7 @@ $posts = get_posts($post_args);
       </div>
     </div>
     <div class="animator-image">
-      <image src="<?= $image['sizes']['large'] ?>">
+      <img class="<?= $orientation; ?>" src="<?= $image['sizes']['large'] ?>">
     </div>
   </div>
 </div>

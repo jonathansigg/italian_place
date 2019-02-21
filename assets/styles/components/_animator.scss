@@ -1,12 +1,12 @@
 $animator-background: black;
 $animator-color: white;
-$animator-text-1: 3rem;
-$animator-text-2: 2rem;
+$animator-text-1: 5rem;
+$animator-text-2: 3.2rem;
 $animator-padding: 3rem;
 $animator-animation-dur: 20s;
 $animator-text-offset: -50px;
 $animator-text-position: top;
-$animator-text-width: 50%;
+$animator-text-width: 40%;
 $animator-image-width: (100% - $animator-text-width);
 
 @keyframes ImageAnimation {
@@ -50,6 +50,8 @@ $animator-image-width: (100% - $animator-text-width);
   &-text {
     float: left;
     width: $animator-text-width;
+    height: 100%;
+
     &-one {
       position: relative;
       font-size: $animator-text-1;
@@ -89,22 +91,34 @@ $animator-image-width: (100% - $animator-text-width);
     float: right;
     position: relative;
     width: $animator-image-width;
+    text-align: right;
+    height: 100%;
 
     img {
       position: relative;
-      width: 100%;
-      opcity: 0;
+      opacity: 0;
       animation: ImageView $animator-animation-dur infinite;
       animation-timing-function: ease-in-out;
       border: solid 4px white;
       -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
       -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
+
+      &.portrait {
+        width: auto;
+        height: 100%;
+      }
+
+      &.landscape {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
   &-wrapper {
-    display: block;
+    width: 100%;
+    height: 100%;
     &::after {
       clear: both;
     }
